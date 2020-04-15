@@ -1,0 +1,15 @@
+<div class="container">
+  <header class="p-2 header-bg">Create a Claim</header>
+  <div class="d-flex p-3">
+    <fieldset class="form-inline">
+      <div class="form-group">
+        <label for="typeahead-http">Investor Loan Number:</label>
+        <input id="typeahead-http" type="text" class="form-control mx-sm-3" [class.is-invalid]="searchFailed"
+          placeholder="search" />
+        <small *ngIf="searching" class="form-text text-muted">searching...</small>
+        <div class="invalid-feedback" *ngIf="searchFailed">Sorry, suggestions could not be loaded.</div>
+      </div>
+    </fieldset>
+    <button type="button" class="btn btn-primary" (click)="goToClaimSubmission($event)">Search</button>
+  </div>
+</div>

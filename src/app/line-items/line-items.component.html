@@ -1,0 +1,19 @@
+<div class="line-items-body">
+    <div class="d-flex pb-2">
+        <div class="header-btns">
+            <button type="button" class="btn btn-link" (click)="add($event)">Add</button>
+            <button type="button" class="btn btn-link" (click)="edit($event)">Edit</button>
+            <button type="button" class="btn btn-link" (click)="copy($event)">Copy</button>
+            <button type="button" class="btn btn-link" (click)="delete($event)">Delete</button>
+        </div>
+        <div class="search-box input-group">
+            <input type="text" class="form-control" placeholder="Search by edit or line item">
+            <!-- <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+                <fa-icon [icon]="faSearch"></fa-icon>
+            </button>
+        </div> -->
+        </div>
+    </div>
+    <header class="p-2 header-bg">Claim Level Edits</header>
+</div>
