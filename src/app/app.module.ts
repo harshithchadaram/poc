@@ -17,7 +17,7 @@ import { ClaimHistoryComponent } from './claim-history/claim-history.component';
 import { LineItemsComponent } from './line-items/line-items.component';
 import { PropServiceHistoryComponent } from './prop-service-history/prop-service-history.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]
