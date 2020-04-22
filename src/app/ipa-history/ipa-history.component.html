@@ -1,1 +1,28 @@
-<p>ipa-history works!</p>
+<div class="d-flex flex-column">
+    <div class="search-box input-group w-25 ml-auto my-3">
+        <input type="text" class="form-control" placeholder="Search by">
+    </div>
+    <!-- <ag-grid-angular style="width:auto;height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+        [columnDefs]="columnDefs" (onGridReady)='onGridReady($event)'>
+    </ag-grid-angular> -->
+    <div class="d-flex justify-content-between">
+        <label *ngFor="let data of columnDefs" class="header-bg w-100 p-2">{{data.headerName}}</label>
+    </div>
+    <ngb-accordion #acc="ngbAccordion" *ngFor="let data of rowData" class="header-ipa">
+        <ngb-panel id="toggle-1">
+            <ng-template ngbPanelTitle>
+                <div class="d-flex ">
+                    <div class="d-flex pr-2">+</div>
+                    <div class="d-flex" style="font-weight: bold; color: #1c2128;">{{data.reqId}}</div>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-primary mt-2 ml-auto">Add to claim</button>
+                </div>
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+    <button type="button" class="btn btn-light mt-2  submit-btn">Export</button>
+
+</div>
